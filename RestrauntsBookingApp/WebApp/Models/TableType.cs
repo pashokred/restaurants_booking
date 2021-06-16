@@ -2,7 +2,7 @@
 {
     public enum TableType
     {
-        Standart,
+        Standard,
         Outdoor
     }
 }

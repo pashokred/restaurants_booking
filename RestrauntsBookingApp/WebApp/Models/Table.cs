@@ -5,7 +5,16 @@ namespace WebApp.Models
 {
     public class Table
     {
-        public Table() { }
+        public Table(int capacity, TableType tableType, bool isReserved)
+        {
+            Capacity = capacity;
+            TableType = tableType;
+            IsReserved = isReserved;
+        }
+        
+        [Required(ErrorMessage = "The field must not be empty")]
+        [Display(Name = "Restaurant")]
+        public int RestaurantId { get; set; }
         public int Id { get; set; }
         [Required(ErrorMessage = "The field must not be empty")]
         [Display(Name = "Capacity of people, that can set the table")]
