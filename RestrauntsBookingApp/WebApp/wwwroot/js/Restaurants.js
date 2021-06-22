@@ -88,17 +88,16 @@ function closeInput() {
 function _displayRestaurants(data) {
     const tBody = document.getElementById('restaurants');
     tBody.innerHTML = '';
-
-
+    
     const button = document.createElement('button');
 
     data.forEach(restaurant => {
         let editButton = button.cloneNode(false);
-        editButton.innerText = 'Edit';
+        editButton.innerText = "Редагувати";
         editButton.setAttribute('onclick', `displayEditForm(${ restaurant.id })`);
 
         let deleteButton = button.cloneNode(false);
-        deleteButton.innerText = 'Delete';
+        deleteButton.innerText = "Видалити";
         deleteButton.setAttribute('onclick', `deleteRestaurant(${ restaurant.id })`);
 
         let tr = tBody.insertRow();

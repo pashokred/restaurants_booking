@@ -27,5 +27,6 @@ namespace WebApp.Models
         [Required(ErrorMessage = "The field must not be empty")]
         [Display(Name = "Is table reserved")]
         public bool IsReserved { get; set; }
+        public virtual Restaurant Restaurant { get; set; }
     }
 }

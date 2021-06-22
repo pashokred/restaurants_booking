@@ -1,28 +1,28 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="ua">
 <head>
     <meta charset="UTF-8">
-    <title>Restaurant booking service</title>
+    <title>Сервіс ресторанів</title>
     <link rel="stylesheet" href="css/site.css" />
 </head>
 <body>
-<h1>Redko Pavlo's Restaurant booking service</h1>
-<h3>Add Restaurant</h3>
+<h1>Сервіс ресторанів</h1>
+<h3>Додати ресторан</h3>
 <form action="javascript:void(0);" method="POST" onsubmit="addRestaurant()">
-    <label for="add-name"></label><input type="text" id="add-name" placeholder="New Restaurant">
-    <label for="add-city"></label><input type="text" id="add-city" placeholder="New Restaurant's city">
-    <label for="add-info"></label><input type="text" id="add-info" placeholder="New Restaurant's info">
-    <input type="submit" value="Add">
+    <label for="add-name"></label><input type="text" id="add-name" placeholder="Новий ресторан">
+    <label for="add-city"></label><input type="text" id="add-city" placeholder="Нове місто ресторану">
+    <label for="add-info"></label><input type="text" id="add-info" placeholder="Нова інформація про ресторан">
+    <input type="submit" value="Додати">
 </form>
 
 <div id="editRestaurant">
-    <h3>Edit</h3>
+    <h3>Редагувати</h3>
     <form action="javascript:void(0);" onsubmit="updateRestaurant()">
         <input type="hidden" id="edit-id">
         <label for="edit-name"></label><input type="text" id="edit-name">
         <label for="edit-city"></label><input type="text" id="edit-city">
         <label for="edit-info"></label><input type="text" id="edit-info">
-        <input type="submit" value="Save">
+        <input type="submit" value="Зберегти">
         <a onclick="closeInput()" aria-label="Close">&#10006;</a>
     </form>
 </div>
@@ -31,9 +31,9 @@
 
 <table>
     <tr>
-        <th>Name</th>
-        <th>City</th>
-        <th>Info</th>
+        <th>Назва</th>
+        <th>Місто</th>
+        <th>Інформація</th>
     </tr>
     <tbody id="restaurants"></tbody>
 </table>

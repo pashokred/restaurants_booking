@@ -92,6 +92,15 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
+            var tables = _context.Tables.Where(t => t.RestaurantId == id).ToList();
+            if (tables.Any())
+            {
+                foreach (var table in tables)
+                {
+                    var table1 = await _context.Tables.FindAsync(table.Id);
+                    _context.Tables.Remove(table1);
+                }
+            }
 
             _context.Restaurants.Remove(restaurant);
             await _context.SaveChangesAsync();
